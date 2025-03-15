@@ -5,38 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="../output.css" rel="stylesheet">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
     integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body class="bg-gradient-to-r from-[#5fee1] to-[#ef99be] flex flex-col gap-15 justify-center items-center h-screen">
-    <h1 class="text-5xl font-bold text-white">Chipmunks</h1>
-    <div class="max-width[960px] bg-black-dark grid grid-cols-2 gap-20 items-center p-5 rounded-xl">
-        <div>
-            <img src="../images/medal.png" alt="">
+<body style="font-family: Poppins;" class="overflow-hidden bg-[#F5EFF2]">
+    <header class="hidden mx-auto top-0 px-10 py-10 md:flex justify-left items-center fixed sm:relative z-20">
+        <div class="flex items-center">
+            <a href="#" class="text-3xl font-bold">
+                <span class="">chipmunks</span>
+            </a>
         </div>
-        <div class="max-w-80 grid gap-5">
-            <h1 class="text-5xl font-bold text-white">Login</h1>
-            <p class="text-white-dull">Connect With Wider World</p>
-            <form action="" class="space-y-6 text-white">
-                <div class="relative">
-                    <div class="absolute top-1 left-1 bg-white-medium rounded-full p-2 flex justify-center items-center text-blue-500">
-                        <i class="fa-solid fa-envelope"></i>
-                    </div>
-                    <input class="w-80 bg-white-light py-2 px-12 rounded-full focus:bg-black-dark focus:outline-none focus:ring-1 focus:ring-black focus:drop-shadow-lg" type="email" name="email" placeholder="Email Address">
+    </header>   
+    <main>
+        <section class="grid md:grid-cols-2 grid-cols-1 h-screen gap-5">
+            <div class="mt-20">
+                <div class="justify-center text-center">
+                    <h1 class="text-3xl font-bold">Hi! Welcome Back</h1>
+                    <p class="text-lg text-gray-500">please enter your details</p>
                 </div>
-                <div class="relative">
-                    <div class="absolute top-1 left-1 bg-white-medium rounded-full p-2 flex justify-center items-center text-blue-500">
-                        <i class="fa-solid fa-lock"></i>
-                    </div>
-                    <input class="w-80 bg-white-light py-2 px-12 rounded-full focus:bg-black-dark focus:outline-none focus:ring-1 focus:ring-black focus:drop-shadow-lg" type="password" name="password" placeholder="Password">
+                <div class="mt-20">
+                    <form action="">
+                        <div class="relative mx-30">
+                            <label class="mb-2" for="username">Email</label>
+                            <div class="absolute top-7 left-2 bg-white-medium rounded-full p-2 flex justify-center items-center text-blue-500">
+                                <i  style="color: #2b7efe;" class="fa-solid fa-user"></i>
+                            </div>
+                            <input id="username" style="border: 2px solid #D9D9D9;" class="w-full bg-white-light py-2 px-12 rounded-full focus:bg-gray-300 focus:outline-none focus:ring-1 focus:ring-black focus:drop-shadow-lg" type="email" name="email" placeholder="Email Address">
+                        </div>
+                        <div class="relative mx-30 mt-7">
+                            <label class="mb-2" for="password">Username</label>
+                            <div class="absolute top-7 left-2 bg-white-medium rounded-full p-2 flex justify-center items-center text-blue-500">
+                                <i style="color: #2b7efe;" class="fa-solid fa-lock"></i>
+                            </div>
+                            <input id="password" style="border: 2px solid #D9D9D9;" class="w-full bg-white-light py-2 px-12 rounded-full focus:bg-gray-300 focus:outline-none focus:ring-1 focus:ring-black focus:drop-shadow-lg" type="password" name="password" placeholder="Password">
+                        </div>
+                        <input  class="bg-blue-500 px-5 py-2 text-white border-[#F5EFF2] rounded-full ml-30 mt-7 hover:bg-blue-600 hover:scale-110 duration-300 cursor-pointer" type="button" value="Login">
+                    </form>
                 </div>
-                <button class="bg-gradient-to-r from-blue-400 to-cyan-200 w-80 font-semibold rounded-full py-2">Login</button>
-            </form>
-            <div class="text-white-dull border-t border-white-light pt-4 space-y-4 text-sm">
-                <p>Belum Punya Akun? <a class="text-blue-300 font-semibold cursor-pointer" href="#">Daftar Sekarang</a></p>
-                <p>Lupa Password? <a class="text-blue-300 font-semibold cursor-pointer" href="#">Reset Password</a></p>
+                <span class="absolute bottom-0 ml-30 mb-10">Didn't have an account? <a href="#" class="text-blue-500">Sign Up</a></span>
             </div>
-        </div>
-    </div>
+            <div class="justify-center items-center text-center">
+                <img src="../images/medal.png" alt="">
+            </div>
+        </section>
+    </main>
 </body>
 </html>
