@@ -14,19 +14,21 @@
             --color-primary: #AE4562;
             --color-secondary: #245581;
             --color-secondary-light: #5890C9;
+            --color-primary-dull: #F5EFF2;
             --font-display-poppin: "Poppins";
         }
     </style>
 </head>
 <body style="font-family: Poppins;" class="overflow-x-hidden overflow-y-auto">
     <header class="hidden mx-auto top-0 pt-5 px-4 py-5 md:flex justify-between items-center fixed sm:relative z-20 bg-[#F5EFF2] ">
-        <div id="profile" class="flex items-center mr-16 cursor-pointer hover:font-bold">
-            <div href="#" class="bg-[#D9D9D9] rounded-full w-10 h-10 ml-5"></div>
+        <div id="profile" class="flex items-center mr-16 cursor-pointer hover:font-bold">   
+            <img class="w-10 h-auto ml-5 rounded-full" src="../images/profile.png" alt="">
             <p class="ml-3 text-primary">username</p>
         </div>
         <div class="flex items-center">
-            <div class="text-2xl font-bold">
-                <span class="text-primary">chipmunks</span>
+            <div class="flex items-center text-2xl font-bold gap-2">
+                <img class="w-10 h-auto" src="../images/logo.png" alt="">
+                <span class="text-primary">teamsync.</span>
             </div>
         </div>
 
@@ -43,11 +45,11 @@
         </div>
     
         <div class="flex flex-col md:flex-row items-center space-x-4 mr-5">
-            <div id="notification" class="cursor-pointer text-primary hover:scale-120 duration-300"><i class="fa-solid fa-bell"></i></div>
-            <a class="cursor-pointer text-primary hover:scale-120 duration-300" href="search.html"><i class="fa-solid fa-magnifying-glass text-primary"></i></a>
+            <div id="notification" class="cursor-pointer text-primary hover:text-primary-light hover:scale-120 duration-300"><i class="fa-solid fa-bell"></i></div>
+            <a class="cursor-pointer text-primary hover:text-primary-light hover:scale-120 duration-300" href="search.html"><i class="fa-solid fa-magnifying-glass text-primary"></i></a>
         </div>
 
-        <div id="notif" class="hidden absolute top-20 right-10 bg-[#F5EFF250] backdrop-blur-xl border-0 rounded-b-2xl">
+        <div id="notif" class="hidden absolute top-20 right-10 bg-primary-dull border-0 rounded-b-2xl">
             <div class="w-60 p-5 space-y-4">
                 <h1 class="text-xl font-bold border-b-2 text-primary border-primary">Notification</h1>
                 <div class=" border-primary border-b-2">
@@ -68,10 +70,13 @@
     <main class="flex flex-row">
         <!-- menu desktop -->
         <div class="fixed hidden h-full md:block pt-10 top-0 bottom-0 lg:left-0 p-2 w-[300px] overflow-y-auto overflow-x-hidden text-center bg-[#F5EFF2]">
-            <h1 class="font-bold text-primary text-[25px]">chipmunks</h1>
+            <div class="flex items-center text-2xl font-bold gap-2 border-b-2 border-primary pb-3 ml-5">
+                <img class="w-10 h-auto" src="../images/logo.png" alt="">
+                <h1 class="font-bold text-primary text-[25px]">teamsync.</h1>
+            </div>
             <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 hover:bg-[#D9D9D9] text-secondary cursor-pointer">
                 <i class="fa-solid fa-user"></i>
-                <a href="profil.html" class="text-[15px] ml-4 font-black underline">Profil</a>
+                <a href="profil.html" class="text-[15px] ml-4">Profil</a>
             </div>
             <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 hover:bg-[#D9D9D9] text-secondary cursor-pointer">
                 <i class="fa-solid fa-home"></i>
@@ -95,12 +100,13 @@
             </a>
         </div>
         
-        <div class="fixed top-0 w-full md:hidden bg-[#F5EFF2] backdrop-blur-2xl">
+        <div class="fixed flex flex-row top-0 w-full md:hidden bg-[#F5EFF2] backdrop-blur-2xl">
             <button class="text-primary m-8" id="menuToggle">
                 <i class="fas fa-bars text-xl"></i>
             </button>
-            <a href="#" class="text-2xl font-bold">
-                <span class="text-primary">chipmunks</span>
+            <a href="#" class="flex flex-row items-center text-2xl font-bold gap-2">
+                <img class="w-10 h-auto" src="../images/logo.png" alt="">
+                <span class="text-primary">teamsync.</span>
             </a>
         </div>
         
@@ -108,7 +114,7 @@
         <div class="hidden md:hidden fixed md:top-20 top-0 bottom-0 lg:left-0 p-2 w-[300px] overflow-y-auto overflow-x-hidden text-center bg-[#F5EFF250] backdrop-blur-md" id="mobileMenu">
             <div class="text-gray-100 text-xl">
                 <div class="p-2.5 mt-1 flex items-center">
-                    <h1 class="font-bold text-primary text-[25px] ml-3">chipmunks</h1>
+                    <h1 class="font-bold text-primary text-[25px] ml-3">teamsync.</h1>
                 </div>
                 <hr class="my-2 text-gray-600">
             </div>
@@ -124,7 +130,7 @@
             </div>
             <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 hover:bg-[#D9D9D9] text-secondary cursor-pointer">
                 <i class="fa-solid fa-user"></i>
-                <a href="profil.html" class="text-[15px] ml-4 font-black underline">Profil</a>
+                <a href="profil.html" class="text-[15px] ml-4">Profil</a>
             </div>
             <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 hover:bg-[#D9D9D9] text-secondary cursor-pointer">
                 <i class="fa-solid fa-home"></i>
@@ -140,7 +146,7 @@
             </div>
             <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 hover:bg-[#D9D9D9] text-secondary cursor-pointer">
                 <i class="fa-solid fa-comment"></i>
-                <a href="message.html" class="text-[15px] ml-4">Messages</a>
+                <a href="message.html" class="text-[15px] ml-4 font-black underline">Messages</a>
             </div>
             <div id="profileMobile" class="flex items-center ml-3 mt-5 text-secondary">
                 <div href="#" class="bg-[#D9D9D9] rounded-full w-7 h-7"></div>
@@ -175,184 +181,83 @@
                 <div class="p-1 flex items-center mt-3 rounded-md px-0 duration-300 hover:bg-[#D9D9D9] text-primary cursor-pointer">
                     <a href="account.html" class="text-sm ml-2">Account</a>
                 </div>
-                <div class="p-1 flex items-center rounded-md px-0 duration-300 hover:bg-[#D9D9D9] text-primary cursor-pointer">
-                    <a href="friends.html" class="text-sm ml-2">Friends</a>
-                </div>
-                <div class="p-1 flex items-center rounded-md px-0 duration-300 hover:bg-[#D9D9D9] text-primary cursor-pointer">
-                    <a href="activity.html" class="text-sm ml-2">Activity</a>
-                </div>
                 <div class="p-1 flex items-center rounded-md mt-7 px-0 duration-300 hover:bg-red-500 hover:text-white text-primary cursor-pointer">
                     <a href="../index.html" class="text-sm ml-2">Logout</a>
                 </div>
             </div>
         </div>
-
+        
         <!-- isi -->
-        <div class="ml-0 mt-20 md:mt-0 md:ml-75 mb-20">
-            <div class="mx-10 my-10 flex flex-col md:flex-row gap-6">
-                <div class="rounded-full flex items-center">
-                    <img class="xl:max-w-[250px] xl:max-h-[250px] max-h-[150px] max-w-[150px] border rounded-full" src="../images/profile.png" alt="">
+         <div class="ml-0 mt-30 md:mt-0 md:ml-75 mb-20 mr-0 md:mr-30 w-full space-y-6">
+            <div class="left-0 right-0 mx-auto w-fit">
+                <div class="flex items-center gap-2 mt-10">
+                    <img class="w-10 h-auto rounded-full" src="../images/profile.png" alt="">
+                    <span>@username</span>
                 </div>
-                <div class="mt-2 md:mt-10 max-w-[500px] flex-col">
-                    <div class="gap-0">
-                        <h1 class="text-2xl font-bold text-secondary">Display Name</h1>
-                        <span class="text-secondary-light">@username</span>
-                    </div>
-                    <div class="mt-2 md:mt-5">
-                        <span class="text-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi semper condimentum felis et pulvinar. 
-                            Praesent dui est, semper at justo vel, sagittis finibus ligula.</span>
-                    </div>
-                    <div class="mt-2 md:mt-5">
-                        <a class="text-secondary hover:text-secondary-light underline" href="#">https://PortofolioLink.com/</a>
-                    </div>
+                <div class="bg-[#D9D9D9] w-full">
+                    <img class="w-80 lg:w-120 lg:h-80 h-50 mt-5" src="../images/bgSignin.png" alt="">
                 </div>
-            </div>
-            <div class="mx-10">
-                <div class="flex flex-row">
-                    <h1 class="text-2xl font-bold text-secondary">Recent Activity</h1>
-                    <button class="xl:hidden ml-10 text-[17px] hover:underline cursor-pointer text-secondary-light">More</button>
+                <div class="flex items-center mt-5 space-x-6">
+                    <div class="hidden">
+                        <i class="fa-solid fa-heart text-3xl text-primary"></i>
+                    </div>
+                    <div class="">
+                        <i class="fa-regular fa-heart text-3xl"></i>
+                    </div>
+                    <i class="fa-regular fa-comment text-3xl"></i>
                 </div>
-                <div class="mt-5 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 justify-between gap-4">
-                    <div class="w-60 h-auto lg:max-w-sm text-white bg-secondary-light border border-gray-200 rounded-lg shadow-sm">
-                        <span>
-                            <img class="rounded-t-lg" src="../images/imgempty.jpg" alt="" />
-                        </span>
-                        <div class="p-5">
-                            <span>
-                                <h5 class="mb-2 text-2xl font-bold tracking-tight ">Noteworthy technology acquisitions 2021</h5>
-                            </span>
-                            <p class="mb-3 font-normal">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                        </div>
-                    </div>
-                    <div class="w-60 h-auto lg:max-w-sm bg-secondary-light border text-white border-gray-200 rounded-lg shadow-sm ">
-                        <span>
-                            <img class="rounded-t-lg" src="../images/imgempty.jpg" alt="" />
-                        </span>
-                        <div class="p-5">
-                            <span>
-                                <h5 class="mb-2 text-2xl font-bold tracking-tight dark:text-white">Noteworthy technology acquisitions 2021</h5>
-                            </span>
-                            <p class="mb-3 font-normal ">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                        </div>
-                    </div>
-                    <div class="w-60 h-auto lg:max-w-sm bg-secondary-light text-white border border-gray-200 rounded-lg shadow-sm">
-                        <span>
-                            <img class="rounded-t-lg" src="../images/imgempty.jpg" alt="" />
-                        </span>
-                        <div class="p-5">
-                            <span>
-                                <h5 class="mb-2 text-2xl font-bold tracking-tight ">Noteworthy technology acquisitions 2021</h5>
-                            </span>
-                            <p class="mb-3 font-normal ">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                        </div>
-                    </div>
-                    <div class="hidden sm:block w-60 h-auto lg:max-w-sm xl:hidden max-w-sm bg-secondary-light text-white border border-gray-200 rounded-lg shadow-sm">
-                        <span>
-                            <img class="rounded-t-lg" src="../images/imgempty.jpg" alt="" />
-                        </span>
-                        <div class="p-5">
-                            <span href="#">
-                                <h5 class="mb-2 text-2xl font-bold tracking-tight">Noteworthy technology acquisitions 2021</h5>
-                            </span>
-                            <p class="mb-3 font-normal ">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                        </div>
-                    </div>
-                    <div class="items-center hidden xl:flex">
-                        <div class="w-10 h-80 bg-secondary-light flex items-center border border-0 rounded-r-xl cursor-pointer hover:scale-110 hover:border-secondary-light hover:bg-secondary-light duration-300">
-                            <span class="text-3xl text-white font-bold pl-2">></span>
-                        </div>
-                    </div>
+                <div class="mt-3 max-w-80 lg:max-w-120">
+                    <h1 class="font-bold">username</h1>
+                    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, dolores molestias molestiae quas voluptas.</span>
                 </div>
             </div>
-            <div class="mx-10 mt-10">
-                <div class="flex flex-row">
-                    <h1 class="text-2xl font-bold text-secondary">My Experience</h1>
-                    <button class="xl:hidden text-[17px] ml-10 hover:underline cursor-pointer text-secondary-light">More</button>
+            <div class="left-0 right-0 mx-auto w-fit mt-20">
+                <div class="flex items-center gap-2 mt-5">
+                    <img class="w-10 h-auto rounded-full" src="../images/profile.png" alt="">
+                    <span>@username</span>
                 </div>
-                <div class="mt-5 grid grid-cols-2 lg:grid-cols-4 justify-between gap-4">
-                    <div class="flex flex-col w-50 mt-2">
-                        <span class="font-bold">Lorem Ipsum</span>
-                        <span class="text-sm">nganangunu blablabla wakwaw</span>
+                <div class="bg-[#D9D9D9] w-full">
+                    <img class="w-80 lg:w-120 lg:h-80 h-50 mt-5" src="../images/bgSignin.png" alt="">
+                </div>
+                <div class="flex items-center mt-5 space-x-6">
+                    <div class="">
+                        <i class="fa-solid fa-heart text-3xl text-primary"></i>
                     </div>
-                    <div class="flex flex-col w-50 mt-2">
-                        <span class="font-bold">Lorem Ipsum</span>
-                        <span class="text-sm">nganangunu blablabla wakwaw</span>
+                    <div class="hidden">
+                        <i class="fa-regular fa-heart text-3xl"></i>
                     </div>
-                    <div class="flex flex-col w-50 mt-2">
-                        <span class="font-bold">Lorem Ipsum</span>
-                        <span class="text-sm">nganangunu blablabla wakwaw</span>
-                    </div>
-                    <div class="flex flex-col w-50 mt-2">
-                        <span class="font-bold">Lorem Ipsum</span>
-                        <span class="text-sm">nganangunu blablabla wakwaw</span>
-                    </div>
-                    <div class="flex flex-col w-50 mt-2">
-                        <span class="font-bold">Lorem Ipsum</span>
-                        <span class="text-sm">nganangunu blablabla wakwaw</span>
-                    </div>
-                    <div class="flex flex-col w-50 mt-2">
-                        <span class="font-bold">Lorem Ipsum</span>
-                        <span class="text-sm">nganangunu blablabla wakwaw</span>
-                    </div>
+                    <i class="fa-regular fa-comment text-3xl"></i>
+                </div>
+                <div class="mt-3 max-w-80 lg:max-w-120">
+                    <h1 class="font-bold">username</h1>
+                    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, dolores molestias molestiae quas voluptas.</span>
                 </div>
             </div>
-            <div class="mx-10 mt-10">
-                <div class="flex flex-row">
-                    <h1 class="text-2xl font-bold text-secondary">My Abilities</h1>
-                    <button class="xl:hidden text-[17px] ml-10 hover:underline cursor-pointer text-secondary-light">More</button>
+            <div class="left-0 right-0 mx-auto w-fit mt-2   0">
+                <div class="flex items-center gap-2 mt-5">
+                    <img class="w-10 h-auto rounded-full" src="../images/profile.png" alt="">
+                    <span>@username</span>
                 </div>
-                <div class="mt-5 grid grid-cols-2 lg:grid-cols-4 justify-between gap-4">
-                    <div class="flex flex-col w-50 mt-2">
-                        <span class="font-bold">Lorem Ipsum</span>
-                        <span class="text-sm">nganangunu blablabla wakwaw</span>
+                <div class="bg-[#D9D9D9] w-full">
+                    <img class="w-80 lg:w-120 lg:h-80 h-50 mt-5" src="../images/bgSignin.png" alt="">
+                </div>
+                <div class="flex items-center mt-5 space-x-6">
+                    <div class="hidden">
+                        <i class="fa-solid fa-heart text-3xl text-primary"></i>
                     </div>
-                    <div class="flex flex-col w-50 mt-2">
-                        <span class="font-bold">Lorem Ipsum</span>
-                        <span class="text-sm">nganangunu blablabla wakwaw</span>
+                    <div class="">
+                        <i class="fa-regular fa-heart text-3xl"></i>
                     </div>
-                    <div class="flex flex-col w-50 mt-2">
-                        <span class="font-bold">Lorem Ipsum</span>
-                        <span class="text-sm">nganangunu blablabla wakwaw</span>
-                    </div>
-                    <div class="flex flex-col w-50 mt-2">
-                        <span class="font-bold">Lorem Ipsum</span>
-                        <span class="text-sm">nganangunu blablabla wakwaw</span>
-                    </div>
-                    <div class="flex flex-col w-50 mt-2">
-                        <span class="font-bold">Lorem Ipsum</span>
-                        <span class="text-sm">nganangunu blablabla wakwaw</span>
-                    </div>
-                    <div class="flex flex-col w-50 mt-2">
-                        <span class="font-bold">Lorem Ipsum</span>
-                        <span class="text-sm">nganangunu blablabla wakwaw</span>
-                    </div>
+                    <i class="fa-regular fa-comment text-3xl"></i>
+                </div>
+                <div class="mt-3 max-w-80 lg:max-w-120">
+                    <h1 class="font-bold">username</h1>
+                    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, dolores molestias molestiae quas voluptas.</span>
                 </div>
             </div>
-            <div class="mx-10 mt-10">
-                <div class="flex flex-row">
-                    <h1 class="text-2xl font-bold text-secondary">Let's Get Connected</h1>
-                    <button class="xl:hidden text-[17px] ml-10 hover:underline cursor-pointer text-secondary-light">More</button>
-                </div>
-                <div class="mt-5 flex gap-4">
-                    <a href="https://www.instagram.com/elighto/" class="flex flex-col w-20 h-20 mt-2 bg-[#E5E5E5] justify-center items-center border border-[#E5E5E5] rounded-full">
-                        <i class="fa-brands fa-instagram text-4xl text-secondary"></i>
-                    </a>
-                    <a href="#" class="flex flex-col w-20 h-20 mt-2 bg-[#E5E5E5] justify-center items-center border border-[#E5E5E5] rounded-full">
-                        <i class="fa-brands fa-github text-4xl text-secondary"></i>
-                    </a>
-                    <a href="#" class="flex flex-col w-20 h-20 mt-2 bg-[#E5E5E5] justify-center items-center border border-[#E5E5E5] rounded-full">
-                        <i class="fa-regular fa-envelope text-4xl text-secondary"></i>
-                    </a>
-                    <a href="#" class="flex flex-col w-20 h-20 mt-2 bg-[#E5E5E5] justify-center items-center border border-[#E5E5E5] rounded-full">
-                        <i class="fa-brands fa-linkedin-in text-4xl text-secondary"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
+         </div>
+
     </main>
-    <div class="fixed bottom-10 right-10 w-15 h-15 border-0 rounded-2xl flex justify-center items-center bg-[#F099BF] hover:bg-[#f5a6c9] hover:scale-110 duration-300 cursor-pointer">
-        <i class="fa-regular fa-pen-to-square text-3xl text-white"></i>
-    </div>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const menuToggle = document.getElementById('menuToggle');

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="../../output.css" rel="stylesheet">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style type="text/tailwindcss">
+        @theme {
+            --color-teks-ipt: #00000070;
+            --color-primary: #AE4562;
+            --color-secondary: #245581;
+            --color-secondary-light: #5890C9;
+            --color-primary-dull: #F5EFF2;
+            --font-display-poppin: "Poppins";
+        }
+    </style>
+</head>
+<body class="font-display-poppin bg-primary-dull">
+    <div>
+        <div class="absolute left-0 right-0 mx-auto w-fit bottom-0 top-0 my-auto h-fit">
+            <img class="w-130 h-auto" src="../../images/bgSignin.png" alt="">
+        </div>
+    </div>
+    <header class="mt-10 ml-15">
+        <h1 class="text-3xl font-bold text-secondary">TeamSync.</h1>
+    </header>
+    <section class="h-screen gap-5 left-0 right-0 mx-auto w-fit">
+        <div class="mt-10">
+            <div class="justify-center text-center">
+                <h1 class="text-3xl font-bold text-secondary">Create Account</h1>
+                <p class="text-lg text-gray-500 font-extralight">So People Know You</p>
+            </div>
+            <div class="mt-25 mx-auto">
+                <form action="">
+                    <div class="relative">
+                        <textarea rows="4" class="w-full-20 bg-transparent border-2 text-teks-ipt border-black py-5 px-5 rounded-3xl focus:bg-black-dark focus:outline-none focus:ring-1 focus:ring-black focus:drop-shadow-lg" type="text" name="bio" placeholder="Describe yourself..."></textarea>
+                    </div>
+                    <div class="relative space-x-5 mt-5">
+                        <button class="bg-transparent px-5 py-2 text-secondary border-secondary border-2 rounded-full hover:bg-blue-300  hover:scale-110 duration-300 cursor-pointer"><a href="../..pages/profil.html">Do it later</a></button>
+                        <button class="bg-secondary-light px-5 py-2 text-white border-[#F5EFF2] rounded-full hover:bg-blue-300  hover:scale-110 duration-300 cursor-pointer"><a href="../../pages/profil.html">Done</a></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

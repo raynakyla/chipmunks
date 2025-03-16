@@ -12,8 +12,8 @@
     <style type="text/tailwindcss">
         @theme {
             --color-primary: #AE4562;
-            --color-secondary: #245581;
-            --color-secondary-light: #5890C9;
+                --color-secondary: #245581;
+                --color-secondary-light: #5890C9;
             --font-display-poppin: "Poppins";
         }
     </style>
@@ -71,7 +71,7 @@
             <h1 class="font-bold text-primary text-[25px]">chipmunks</h1>
             <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 hover:bg-[#D9D9D9] text-secondary cursor-pointer">
                 <i class="fa-solid fa-user"></i>
-                <a href="profil.html" class="text-[15px] ml-4 font-black underline">Profil</a>
+                <a href="profil.html" class="text-[15px] ml-4">Profil</a>
             </div>
             <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 hover:bg-[#D9D9D9] text-secondary cursor-pointer">
                 <i class="fa-solid fa-home"></i>
@@ -87,7 +87,7 @@
             </div>
             <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 hover:bg-[#D9D9D9] text-secondary cursor-pointer">
                 <i class="fa-solid fa-comment"></i>
-                <a href="message.html" class="text-[15px] ml-4">Messages</a>
+                <a href="message.html" class="text-[15px] ml-4 font-black underline">Messages</a>
             </div>
             <a href="upload.html" class="absolute bottom-10 left-10 w-30 p-2.5 flex items-center rounded-md px-4 duration-300 bg-secondary-light hover:scale-110 hover:bg-secondary text-white cursor-pointer">
                 <i class="fa-solid fa-plus"></i>
@@ -124,7 +124,7 @@
             </div>
             <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 hover:bg-[#D9D9D9] text-secondary cursor-pointer">
                 <i class="fa-solid fa-user"></i>
-                <a href="profil.html" class="text-[15px] ml-4 font-black underline">Profil</a>
+                <a href="profil.html" class="text-[15px] ml-4">Profil</a>
             </div>
             <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 hover:bg-[#D9D9D9] text-secondary cursor-pointer">
                 <i class="fa-solid fa-home"></i>
@@ -140,7 +140,7 @@
             </div>
             <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 hover:bg-[#D9D9D9] text-secondary cursor-pointer">
                 <i class="fa-solid fa-comment"></i>
-                <a href="message.html" class="text-[15px] ml-4">Messages</a>
+                <a href="message.html" class="text-[15px] ml-4 font-black underline">Messages</a>
             </div>
             <div id="profileMobile" class="flex items-center ml-3 mt-5 text-secondary">
                 <div href="#" class="bg-[#D9D9D9] rounded-full w-7 h-7"></div>
@@ -188,171 +188,238 @@
         </div>
 
         <!-- isi -->
-        <div class="ml-0 mt-20 md:mt-0 md:ml-75 mb-20">
-            <div class="mx-10 my-10 flex flex-col md:flex-row gap-6">
-                <div class="rounded-full flex items-center">
-                    <img class="xl:max-w-[250px] xl:max-h-[250px] max-h-[150px] max-w-[150px] border rounded-full" src="../images/profile.png" alt="">
+        <div class="ml-0 mt-30 md:mt-0 md:ml-75 mb-20 mr-10 md:mr-30 w-full space-y-6">
+            <div class="w-full mr-5 mt-10 bg-secondary-light ml-5 md:ml-15 border border-secondary-light rounded-3xl flex justify-between items-center md:relative">
+                <div class="flex flex-row items-center px-5 py-2">
+                    <img class="border rounded-full w-10 h-10 md:w-20 md:h-20" src="../images/profile.png" alt="">
+                    <div class="ml-5">
+                        <h1 class="md:text-xl font-semibold text-white">Username</h1>
+                        <span class="text-white text-sm">Lorem Ipsum..</span>
+                    </div>
                 </div>
-                <div class="mt-2 md:mt-10 max-w-[500px] flex-col">
-                    <div class="gap-0">
-                        <h1 class="text-2xl font-bold text-secondary">Display Name</h1>
-                        <span class="text-secondary-light">@username</span>
-                    </div>
-                    <div class="mt-2 md:mt-5">
-                        <span class="text-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi semper condimentum felis et pulvinar. 
-                            Praesent dui est, semper at justo vel, sagittis finibus ligula.</span>
-                    </div>
-                    <div class="mt-2 md:mt-5">
-                        <a class="text-secondary hover:text-secondary-light underline" href="#">https://PortofolioLink.com/</a>
-                    </div>
+                <div class="text-white text-sm flex mr-5">
+                    <span>12.00 am</span>
                 </div>
             </div>
-            <div class="mx-10">
-                <div class="flex flex-row">
-                    <h1 class="text-2xl font-bold text-secondary">Recent Activity</h1>
-                    <button class="xl:hidden ml-10 text-[17px] hover:underline cursor-pointer text-secondary-light">More</button>
+            <div class="w-full mr-5 bg-secondary-light ml-5 md:ml-15 border border-secondary-light rounded-3xl flex justify-between items-center md:relative">
+                <div class="flex flex-row items-center px-5 py-2">
+                    <img class="border rounded-full w-10 h-10 md:w-20 md:h-20" src="../images/profile.png" alt="">
+                    <div class="ml-5">
+                        <h1 class="md:text-xl font-semibold text-white">Username</h1>
+                        <span class="text-white text-sm">Lorem Ipsum..</span>
+                    </div>
                 </div>
-                <div class="mt-5 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 justify-between gap-4">
-                    <div class="w-60 h-auto lg:max-w-sm text-white bg-secondary-light border border-gray-200 rounded-lg shadow-sm">
-                        <span>
-                            <img class="rounded-t-lg" src="../images/imgempty.jpg" alt="" />
-                        </span>
-                        <div class="p-5">
-                            <span>
-                                <h5 class="mb-2 text-2xl font-bold tracking-tight ">Noteworthy technology acquisitions 2021</h5>
-                            </span>
-                            <p class="mb-3 font-normal">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                        </div>
-                    </div>
-                    <div class="w-60 h-auto lg:max-w-sm bg-secondary-light border text-white border-gray-200 rounded-lg shadow-sm ">
-                        <span>
-                            <img class="rounded-t-lg" src="../images/imgempty.jpg" alt="" />
-                        </span>
-                        <div class="p-5">
-                            <span>
-                                <h5 class="mb-2 text-2xl font-bold tracking-tight dark:text-white">Noteworthy technology acquisitions 2021</h5>
-                            </span>
-                            <p class="mb-3 font-normal ">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                        </div>
-                    </div>
-                    <div class="w-60 h-auto lg:max-w-sm bg-secondary-light text-white border border-gray-200 rounded-lg shadow-sm">
-                        <span>
-                            <img class="rounded-t-lg" src="../images/imgempty.jpg" alt="" />
-                        </span>
-                        <div class="p-5">
-                            <span>
-                                <h5 class="mb-2 text-2xl font-bold tracking-tight ">Noteworthy technology acquisitions 2021</h5>
-                            </span>
-                            <p class="mb-3 font-normal ">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                        </div>
-                    </div>
-                    <div class="hidden sm:block w-60 h-auto lg:max-w-sm xl:hidden max-w-sm bg-secondary-light text-white border border-gray-200 rounded-lg shadow-sm">
-                        <span>
-                            <img class="rounded-t-lg" src="../images/imgempty.jpg" alt="" />
-                        </span>
-                        <div class="p-5">
-                            <span href="#">
-                                <h5 class="mb-2 text-2xl font-bold tracking-tight">Noteworthy technology acquisitions 2021</h5>
-                            </span>
-                            <p class="mb-3 font-normal ">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                        </div>
-                    </div>
-                    <div class="items-center hidden xl:flex">
-                        <div class="w-10 h-80 bg-secondary-light flex items-center border border-0 rounded-r-xl cursor-pointer hover:scale-110 hover:border-secondary-light hover:bg-secondary-light duration-300">
-                            <span class="text-3xl text-white font-bold pl-2">></span>
-                        </div>
-                    </div>
+                <div class="text-white text-sm flex mr-5">
+                    <span>12.00 am</span>
                 </div>
             </div>
-            <div class="mx-10 mt-10">
-                <div class="flex flex-row">
-                    <h1 class="text-2xl font-bold text-secondary">My Experience</h1>
-                    <button class="xl:hidden text-[17px] ml-10 hover:underline cursor-pointer text-secondary-light">More</button>
+            <div class="w-full mr-5 bg-secondary-light ml-5 md:ml-15 border border-secondary-light rounded-3xl flex justify-between items-center md:relative">
+                <div class="flex flex-row items-center px-5 py-2">
+                    <img class="border rounded-full w-10 h-10 md:w-20 md:h-20" src="../images/profile.png" alt="">
+                    <div class="ml-5">
+                        <h1 class="md:text-xl font-semibold text-white">Username</h1>
+                        <span class="text-white text-sm">Lorem Ipsum..</span>
+                    </div>
                 </div>
-                <div class="mt-5 grid grid-cols-2 lg:grid-cols-4 justify-between gap-4">
-                    <div class="flex flex-col w-50 mt-2">
-                        <span class="font-bold">Lorem Ipsum</span>
-                        <span class="text-sm">nganangunu blablabla wakwaw</span>
-                    </div>
-                    <div class="flex flex-col w-50 mt-2">
-                        <span class="font-bold">Lorem Ipsum</span>
-                        <span class="text-sm">nganangunu blablabla wakwaw</span>
-                    </div>
-                    <div class="flex flex-col w-50 mt-2">
-                        <span class="font-bold">Lorem Ipsum</span>
-                        <span class="text-sm">nganangunu blablabla wakwaw</span>
-                    </div>
-                    <div class="flex flex-col w-50 mt-2">
-                        <span class="font-bold">Lorem Ipsum</span>
-                        <span class="text-sm">nganangunu blablabla wakwaw</span>
-                    </div>
-                    <div class="flex flex-col w-50 mt-2">
-                        <span class="font-bold">Lorem Ipsum</span>
-                        <span class="text-sm">nganangunu blablabla wakwaw</span>
-                    </div>
-                    <div class="flex flex-col w-50 mt-2">
-                        <span class="font-bold">Lorem Ipsum</span>
-                        <span class="text-sm">nganangunu blablabla wakwaw</span>
-                    </div>
+                <div class="text-white text-sm flex mr-5">
+                    <span>12.00 am</span>
                 </div>
             </div>
-            <div class="mx-10 mt-10">
-                <div class="flex flex-row">
-                    <h1 class="text-2xl font-bold text-secondary">My Abilities</h1>
-                    <button class="xl:hidden text-[17px] ml-10 hover:underline cursor-pointer text-secondary-light">More</button>
+            <div class="w-full mr-5 bg-secondary-light ml-5 md:ml-15 border border-secondary-light rounded-3xl flex justify-between items-center md:relative">
+                <div class="flex flex-row items-center px-5 py-2">
+                    <img class="border rounded-full w-10 h-10 md:w-20 md:h-20" src="../images/profile.png" alt="">
+                    <div class="ml-5">
+                        <h1 class="md:text-xl font-semibold text-white">Username</h1>
+                        <span class="text-white text-sm">Lorem Ipsum..</span>
+                    </div>
                 </div>
-                <div class="mt-5 grid grid-cols-2 lg:grid-cols-4 justify-between gap-4">
-                    <div class="flex flex-col w-50 mt-2">
-                        <span class="font-bold">Lorem Ipsum</span>
-                        <span class="text-sm">nganangunu blablabla wakwaw</span>
-                    </div>
-                    <div class="flex flex-col w-50 mt-2">
-                        <span class="font-bold">Lorem Ipsum</span>
-                        <span class="text-sm">nganangunu blablabla wakwaw</span>
-                    </div>
-                    <div class="flex flex-col w-50 mt-2">
-                        <span class="font-bold">Lorem Ipsum</span>
-                        <span class="text-sm">nganangunu blablabla wakwaw</span>
-                    </div>
-                    <div class="flex flex-col w-50 mt-2">
-                        <span class="font-bold">Lorem Ipsum</span>
-                        <span class="text-sm">nganangunu blablabla wakwaw</span>
-                    </div>
-                    <div class="flex flex-col w-50 mt-2">
-                        <span class="font-bold">Lorem Ipsum</span>
-                        <span class="text-sm">nganangunu blablabla wakwaw</span>
-                    </div>
-                    <div class="flex flex-col w-50 mt-2">
-                        <span class="font-bold">Lorem Ipsum</span>
-                        <span class="text-sm">nganangunu blablabla wakwaw</span>
-                    </div>
+                <div class="text-white text-sm flex mr-5">
+                    <span>12.00 am</span>
                 </div>
             </div>
-            <div class="mx-10 mt-10">
-                <div class="flex flex-row">
-                    <h1 class="text-2xl font-bold text-secondary">Let's Get Connected</h1>
-                    <button class="xl:hidden text-[17px] ml-10 hover:underline cursor-pointer text-secondary-light">More</button>
+            <div class="w-full mr-5 bg-secondary-light ml-5 md:ml-15 border border-secondary-light rounded-3xl flex justify-between items-center md:relative">
+                <div class="flex flex-row items-center px-5 py-2">
+                    <img class="border rounded-full w-10 h-10 md:w-20 md:h-20" src="../images/profile.png" alt="">
+                    <div class="ml-5">
+                        <h1 class="md:text-xl font-semibold text-white">Username</h1>
+                        <span class="text-white text-sm">Lorem Ipsum..</span>
+                    </div>
                 </div>
-                <div class="mt-5 flex gap-4">
-                    <a href="https://www.instagram.com/elighto/" class="flex flex-col w-20 h-20 mt-2 bg-[#E5E5E5] justify-center items-center border border-[#E5E5E5] rounded-full">
-                        <i class="fa-brands fa-instagram text-4xl text-secondary"></i>
-                    </a>
-                    <a href="#" class="flex flex-col w-20 h-20 mt-2 bg-[#E5E5E5] justify-center items-center border border-[#E5E5E5] rounded-full">
-                        <i class="fa-brands fa-github text-4xl text-secondary"></i>
-                    </a>
-                    <a href="#" class="flex flex-col w-20 h-20 mt-2 bg-[#E5E5E5] justify-center items-center border border-[#E5E5E5] rounded-full">
-                        <i class="fa-regular fa-envelope text-4xl text-secondary"></i>
-                    </a>
-                    <a href="#" class="flex flex-col w-20 h-20 mt-2 bg-[#E5E5E5] justify-center items-center border border-[#E5E5E5] rounded-full">
-                        <i class="fa-brands fa-linkedin-in text-4xl text-secondary"></i>
-                    </a>
+                <div class="text-white text-sm flex mr-5">
+                    <span>12.00 am</span>
                 </div>
             </div>
+            <div class="w-full mr-5 bg-secondary-light ml-5 md:ml-15 border border-secondary-light rounded-3xl flex justify-between items-center md:relative">
+                <div class="flex flex-row items-center px-5 py-2">
+                    <img class="border rounded-full w-10 h-10 md:w-20 md:h-20" src="../images/profile.png" alt="">
+                    <div class="ml-5">
+                        <h1 class="md:text-xl font-semibold text-white">Username</h1>
+                        <span class="text-white text-sm">Lorem Ipsum..</span>
+                    </div>
+                </div>
+                <div class="text-white text-sm flex mr-5">
+                    <span>12.00 am</span>
+                </div>
+            </div>
+            <div class="w-full mr-5 bg-secondary-light ml-5 md:ml-15 border border-secondary-light rounded-3xl flex justify-between items-center md:relative">
+                <div class="flex flex-row items-center px-5 py-2">
+                    <img class="border rounded-full w-10 h-10 md:w-20 md:h-20" src="../images/profile.png" alt="">
+                    <div class="ml-5">
+                        <h1 class="md:text-xl font-semibold text-white">Username</h1>
+                        <span class="text-white text-sm">Lorem Ipsum..</span>
+                    </div>
+                </div>
+                <div class="text-white text-sm flex mr-5">
+                    <span>12.00 am</span>
+                </div>
+            </div>
+            <div class="w-full mr-5 bg-secondary-light ml-5 md:ml-15 border border-secondary-light rounded-3xl flex justify-between items-center md:relative">
+                <div class="flex flex-row items-center px-5 py-2">
+                    <img class="border rounded-full w-10 h-10 md:w-20 md:h-20" src="../images/profile.png" alt="">
+                    <div class="ml-5">
+                        <h1 class="md:text-xl font-semibold text-white">Username</h1>
+                        <span class="text-white text-sm">Lorem Ipsum..</span>
+                    </div>
+                </div>
+                <div class="text-white text-sm flex mr-5">
+                    <span>12.00 am</span>
+                </div>
+            </div>
+            <div class="w-full mr-5 bg-secondary-light ml-5 md:ml-15 border border-secondary-light rounded-3xl flex justify-between items-center md:relative">
+                <div class="flex flex-row items-center px-5 py-2">
+                    <img class="border rounded-full w-10 h-10 md:w-20 md:h-20" src="../images/profile.png" alt="">
+                    <div class="ml-5">
+                        <h1 class="md:text-xl font-semibold text-white">Username</h1>
+                        <span class="text-white text-sm">Lorem Ipsum..</span>
+                    </div>
+                </div>
+                <div class="text-white text-sm flex mr-5">
+                    <span>12.00 am</span>
+                </div>
+            </div>
+            <div class="w-full mr-5 bg-secondary-light ml-5 md:ml-15 border border-secondary-light rounded-3xl flex justify-between items-center md:relative">
+                <div class="flex flex-row items-center px-5 py-2">
+                    <img class="border rounded-full w-10 h-10 md:w-20 md:h-20" src="../images/profile.png" alt="">
+                    <div class="ml-5">
+                        <h1 class="md:text-xl font-semibold text-white">Username</h1>
+                        <span class="text-white text-sm">Lorem Ipsum..</span>
+                    </div>
+                </div>
+                <div class="text-white text-sm flex mr-5">
+                    <span>12.00 am</span>
+                </div>
+            </div>
+            <div class="w-full mr-5 bg-secondary-light ml-5 md:ml-15 border border-secondary-light rounded-3xl flex justify-between items-center md:relative">
+                <div class="flex flex-row items-center px-5 py-2">
+                    <img class="border rounded-full w-10 h-10 md:w-20 md:h-20" src="../images/profile.png" alt="">
+                    <div class="ml-5">
+                        <h1 class="md:text-xl font-semibold text-white">Username</h1>
+                        <span class="text-white text-sm">Lorem Ipsum..</span>
+                    </div>
+                </div>
+                <div class="text-white text-sm flex mr-5">
+                    <span>12.00 am</span>
+                </div>
+            </div>
+            <div class="w-full mr-5 bg-secondary-light ml-5 md:ml-15 border border-secondary-light rounded-3xl flex justify-between items-center md:relative">
+                <div class="flex flex-row items-center px-5 py-2">
+                    <img class="border rounded-full w-10 h-10 md:w-20 md:h-20" src="../images/profile.png" alt="">
+                    <div class="ml-5">
+                        <h1 class="md:text-xl font-semibold text-white">Username</h1>
+                        <span class="text-white text-sm">Lorem Ipsum..</span>
+                    </div>
+                </div>
+                <div class="text-white text-sm flex mr-5">
+                    <span>12.00 am</span>
+                </div>
+            </div>
+            <div class="w-full mr-5 bg-secondary-light ml-5 md:ml-15 border border-secondary-light rounded-3xl flex justify-between items-center md:relative">
+                <div class="flex flex-row items-center px-5 py-2">
+                    <img class="border rounded-full w-10 h-10 md:w-20 md:h-20" src="../images/profile.png" alt="">
+                    <div class="ml-5">
+                        <h1 class="md:text-xl font-semibold text-white">Username</h1>
+                        <span class="text-white text-sm">Lorem Ipsum..</span>
+                    </div>
+                </div>
+                <div class="text-white text-sm flex mr-5">
+                    <span>12.00 am</span>
+                </div>
+            </div>
+            <div class="w-full mr-5 bg-secondary-light ml-5 md:ml-15 border border-secondary-light rounded-3xl flex justify-between items-center md:relative">
+                <div class="flex flex-row items-center px-5 py-2">
+                    <img class="border rounded-full w-10 h-10 md:w-20 md:h-20" src="../images/profile.png" alt="">
+                    <div class="ml-5">
+                        <h1 class="md:text-xl font-semibold text-white">Username</h1>
+                        <span class="text-white text-sm">Lorem Ipsum..</span>
+                    </div>
+                </div>
+                <div class="text-white text-sm flex mr-5">
+                    <span>12.00 am</span>
+                </div>
+            </div>
+            <div class="w-full mr-5 bg-secondary-light ml-5 md:ml-15 border border-secondary-light rounded-3xl flex justify-between items-center md:relative">
+                <div class="flex flex-row items-center px-5 py-2">
+                    <img class="border rounded-full w-10 h-10 md:w-20 md:h-20" src="../images/profile.png" alt="">
+                    <div class="ml-5">
+                        <h1 class="md:text-xl font-semibold text-white">Username</h1>
+                        <span class="text-white text-sm">Lorem Ipsum..</span>
+                    </div>
+                </div>
+                <div class="text-white text-sm flex mr-5">
+                    <span>12.00 am</span>
+                </div>
+            </div>
+            <div class="w-full mr-5 bg-secondary-light ml-5 md:ml-15 border border-secondary-light rounded-3xl flex justify-between items-center md:relative">
+                <div class="flex flex-row items-center px-5 py-2">
+                    <img class="border rounded-full w-10 h-10 md:w-20 md:h-20" src="../images/profile.png" alt="">
+                    <div class="ml-5">
+                        <h1 class="md:text-xl font-semibold text-white">Username</h1>
+                        <span class="text-white text-sm">Lorem Ipsum..</span>
+                    </div>
+                </div>
+                <div class="text-white text-sm flex mr-5">
+                    <span>12.00 am</span>
+                </div>
+            </div>
+            <div class="w-full mr-5 bg-secondary-light ml-5 md:ml-15 border border-secondary-light rounded-3xl flex justify-between items-center md:relative">
+                <div class="flex flex-row items-center px-5 py-2">
+                    <img class="border rounded-full w-10 h-10 md:w-20 md:h-20" src="../images/profile.png" alt="">
+                    <div class="ml-5">
+                        <h1 class="md:text-xl font-semibold text-white">Username</h1>
+                        <span class="text-white text-sm">Lorem Ipsum..</span>
+                    </div>
+                </div>
+                <div class="text-white text-sm flex mr-5">
+                    <span>12.00 am</span>
+                </div>
+            </div>
+            <div class="w-full mr-5 bg-secondary-light ml-5 md:ml-15 border border-secondary-light rounded-3xl flex justify-between items-center md:relative">
+                <div class="flex flex-row items-center px-5 py-2">
+                    <img class="border rounded-full w-10 h-10 md:w-20 md:h-20" src="../images/profile.png" alt="">
+                    <div class="ml-5">
+                        <h1 class="md:text-xl font-semibold text-white">Username</h1>
+                        <span class="text-white text-sm">Lorem Ipsum..</span>
+                    </div>
+                </div>
+                <div class="text-white text-sm flex mr-5">
+                    <span>12.00 am</span>
+                </div>
+            </div>
+            <div class="w-full mr-5 bg-secondary-light ml-5 md:ml-15 border border-secondary-light rounded-3xl flex justify-between items-center md:relative">
+                <div class="flex flex-row items-center px-5 py-2">
+                    <img class="border rounded-full w-10 h-10 md:w-20 md:h-20" src="../images/profile.png" alt="">
+                    <div class="ml-5">
+                        <h1 class="md:text-xl font-semibold text-white">Username</h1>
+                        <span class="text-white text-sm">Lorem Ipsum..</span>
+                    </div>
+                </div>
+                <div class="text-white text-sm flex mr-5">
+                    <span>12.00 am</span>
+                </div>
+            </div>
+            
         </div>
     </main>
-    <div class="fixed bottom-10 right-10 w-15 h-15 border-0 rounded-2xl flex justify-center items-center bg-[#F099BF] hover:bg-[#f5a6c9] hover:scale-110 duration-300 cursor-pointer">
-        <i class="fa-regular fa-pen-to-square text-3xl text-white"></i>
-    </div>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const menuToggle = document.getElementById('menuToggle');

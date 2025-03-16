@@ -14,6 +14,7 @@
             --color-primary: #AE4562;
             --color-secondary: #245581;
             --color-secondary-light: #5890C9;
+            --color-primary-dull: #F5EFF2;
             --font-display-poppin: "Poppins";
         }
     </style>
@@ -43,11 +44,11 @@
         </div>
     
         <div class="flex flex-col md:flex-row items-center space-x-4 mr-5">
-            <div id="notification" class="cursor-pointer text-primary hover:scale-120 duration-300"><i class="fa-solid fa-bell"></i></div>
-            <a class="cursor-pointer text-primary hover:scale-120 duration-300" href="search.html"><i class="fa-solid fa-magnifying-glass text-primary"></i></a>
+            <div id="notification" class="cursor-pointer text-primary hover:text-primary-light hover:scale-120 duration-300"><i class="fa-solid fa-bell"></i></div>
+            <a class="cursor-pointer text-primary hover:text-primary-light hover:scale-120 duration-300" href="search.html"><i class="fa-solid fa-magnifying-glass text-primary"></i></a>
         </div>
 
-        <div id="notif" class="hidden absolute top-20 right-10 bg-[#F5EFF250] backdrop-blur-xl border-0 rounded-b-2xl">
+        <div id="notif" class="hidden absolute top-20 right-10 bg-primary-dull border-0 rounded-b-2xl">
             <div class="w-60 p-5 space-y-4">
                 <h1 class="text-xl font-bold border-b-2 text-primary border-primary">Notification</h1>
                 <div class=" border-primary border-b-2">
@@ -71,7 +72,7 @@
             <h1 class="font-bold text-primary text-[25px]">chipmunks</h1>
             <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 hover:bg-[#D9D9D9] text-secondary cursor-pointer">
                 <i class="fa-solid fa-user"></i>
-                <a href="profil.html" class="text-[15px] ml-4 font-black underline">Profil</a>
+                <a href="profil.html" class="text-[15px] ml-4">Profil</a>
             </div>
             <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 hover:bg-[#D9D9D9] text-secondary cursor-pointer">
                 <i class="fa-solid fa-home"></i>
@@ -124,7 +125,7 @@
             </div>
             <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 hover:bg-[#D9D9D9] text-secondary cursor-pointer">
                 <i class="fa-solid fa-user"></i>
-                <a href="profil.html" class="text-[15px] ml-4 font-black underline">Profil</a>
+                <a href="profil.html" class="text-[15px] ml-4">Profil</a>
             </div>
             <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 hover:bg-[#D9D9D9] text-secondary cursor-pointer">
                 <i class="fa-solid fa-home"></i>
@@ -140,7 +141,7 @@
             </div>
             <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 hover:bg-[#D9D9D9] text-secondary cursor-pointer">
                 <i class="fa-solid fa-comment"></i>
-                <a href="message.html" class="text-[15px] ml-4">Messages</a>
+                <a href="message.html" class="text-[15px] ml-4 font-black underline">Messages</a>
             </div>
             <div id="profileMobile" class="flex items-center ml-3 mt-5 text-secondary">
                 <div href="#" class="bg-[#D9D9D9] rounded-full w-7 h-7"></div>
@@ -188,171 +189,146 @@
         </div>
 
         <!-- isi -->
-        <div class="ml-0 mt-20 md:mt-0 md:ml-75 mb-20">
-            <div class="mx-10 my-10 flex flex-col md:flex-row gap-6">
-                <div class="rounded-full flex items-center">
-                    <img class="xl:max-w-[250px] xl:max-h-[250px] max-h-[150px] max-w-[150px] border rounded-full" src="../images/profile.png" alt="">
+         <div class="ml-0 mt-30 md:mt-0 md:ml-75 mb-20 mr-10 md:mr-30 w-full">
+            <div class="md:relative mx-3 md:mx-30 xl:mx-70 mt-10">
+                <input type="text" placeholder="Search" class="w-full bg-transparent border-2 border-gray-300 py-2 px-12 rounded-full focus:bg-[#F5EFF270] focus:outline-none focus:ring-1 focus:ring-black focus:drop-shadow-lg">
+                <i class="hidden md:block absolute top-43.5 left-7 md:top-3.5 md:left-4 text-gray-400 fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div class="mx-7 mt-8 flex flex-col md:flex-row gap-6 lg:gap-20">
+                <div class="col-span-2">
+                    <div class="flex items-center space-x-2 cursor-pointer">
+                        <span class="font-bold text-secondary">Account</span>
+                        <a href="">
+                            <svg class="hover:w-5 hover:h-6 duration-300 cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="10" height="17" viewBox="0 0 15 27" fill="none">
+                                <path d="M3 24.5L11.6404 13.9395C11.8496 13.6838 11.8496 13.3162 11.6404 13.0605L3 2.5" stroke="#245581" stroke-width="5" stroke-linecap="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="mt-5 space-y-4">
+                        <div class="flex items-center cursor-pointer">
+                            <img class="w-13 h-13 rounded-full" src="../images/profile.png">
+                            <span class="font-semibold text-secondary ml-5">username</span>
+                            <span class="font-light text-sm text-secondary ml-2 hidden lg:block">Display Name</span>
+                        </div>
+                        <div class="flex items-center cursor-pointer">
+                            <img class="w-13 h-13 rounded-full" src="../images/profile.png">
+                            <span class="font-semibold text-secondary ml-5">username</span>
+                            <span class="font-light text-sm text-secondary ml-2 hidden lg:block">Display Name</span>
+                        </div>
+                        <div class="flex items-center cursor-pointer">
+                            <img class="w-13 h-13 rounded-full" src="../images/profile.png">
+                            <span class="font-semibold text-secondary ml-5">username</span>
+                            <span class="font-light text-sm text-secondary ml-2 hidden lg:block">Display Name</span>
+                        </div>
+                        <div class="flex items-center cursor-pointer">
+                            <img class="w-13 h-13 rounded-full" src="../images/profile.png">
+                            <span class="font-semibold text-secondary ml-5">username</span>
+                            <span class="font-light text-sm text-secondary ml-2 hidden lg:block">Display Name</span>
+                        </div>
+                        <div class="flex items-center cursor-pointer">
+                            <img class="w-13 h-13 rounded-full" src="../images/profile.png">
+                            <span class="font-semibold text-secondary ml-5">username</span>
+                            <span class="font-light text-sm text-secondary ml-2 hidden lg:block">Display Name</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="mt-2 md:mt-10 max-w-[500px] flex-col">
-                    <div class="gap-0">
-                        <h1 class="text-2xl font-bold text-secondary">Display Name</h1>
-                        <span class="text-secondary-light">@username</span>
+                <div class="flex flex-col">
+                    <div class="flex items-center space-x-2 cursor-pointer">
+                        <span class="font-bold text-secondary">Post</span>
+                        <a href="">
+                            <svg class="hover:w-5 hover:h-6 duration-300 cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="10" height="17" viewBox="0 0 15 27" fill="none">
+                                <path d="M3 24.5L11.6404 13.9395C11.8496 13.6838 11.8496 13.3162 11.6404 13.0605L3 2.5" stroke="#245581" stroke-width="5" stroke-linecap="round"/>
+                            </svg>
+                        </a>
                     </div>
-                    <div class="mt-2 md:mt-5">
-                        <span class="text-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi semper condimentum felis et pulvinar. 
-                            Praesent dui est, semper at justo vel, sagittis finibus ligula.</span>
-                    </div>
-                    <div class="mt-2 md:mt-5">
-                        <a class="text-secondary hover:text-secondary-light underline" href="#">https://PortofolioLink.com/</a>
+                    <div class="grid grid-cols-3 gap-0">
+                        <div>
+                            <img class="lg:w-40 lg:h-40 w-20 h-20 object-cover" src="../images/imgempty.jpg">
+                        </div>
+                        <div>
+                            <img class="lg:w-40 lg:h-40 w-20 h-20 object-cover" src="../images/imgempty.jpg">
+                        </div>
+                        <div>
+                            <img class="lg:w-40 lg:h-40 w-20 h-20 object-cover" src="../images/imgempty.jpg">
+                        </div>
+                        <div>
+                            <img class="lg:w-40 lg:h-40 w-20 h-20 object-cover" src="../images/imgempty.jpg">
+                        </div>
+                        <div>
+                            <img class="lg:w-40 lg:h-40 w-20 h-20 object-cover" src="../images/imgempty.jpg">
+                        </div>
+                        <div>
+                            <img class="lg:w-40 lg:h-40 w-20 h-20 object-cover" src="../images/imgempty.jpg">
+                        </div>
+                        <div>
+                            <img class="lg:w-40 lg:h-40 w-20 h-20 object-cover" src="../images/imgempty.jpg">
+                        </div>
+                        <div>
+                            <img class="lg:w-40 lg:h-40 w-20 h-20 object-cover" src="../images/imgempty.jpg">
+                        </div>
+                            <div>
+                                <img class="lg:w-40 lg:h-40 w-20 h-20 object-cover" src="../images/imgempty.jpg">
+                            </div>
                     </div>
                 </div>
             </div>
-            <div class="mx-10">
-                <div class="flex flex-row">
-                    <h1 class="text-2xl font-bold text-secondary">Recent Activity</h1>
-                    <button class="xl:hidden ml-10 text-[17px] hover:underline cursor-pointer text-secondary-light">More</button>
-                </div>
-                <div class="mt-5 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 justify-between gap-4">
-                    <div class="w-60 h-auto lg:max-w-sm text-white bg-secondary-light border border-gray-200 rounded-lg shadow-sm">
-                        <span>
-                            <img class="rounded-t-lg" src="../images/imgempty.jpg" alt="" />
-                        </span>
-                        <div class="p-5">
-                            <span>
-                                <h5 class="mb-2 text-2xl font-bold tracking-tight ">Noteworthy technology acquisitions 2021</h5>
-                            </span>
-                            <p class="mb-3 font-normal">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                        </div>
-                    </div>
-                    <div class="w-60 h-auto lg:max-w-sm bg-secondary-light border text-white border-gray-200 rounded-lg shadow-sm ">
-                        <span>
-                            <img class="rounded-t-lg" src="../images/imgempty.jpg" alt="" />
-                        </span>
-                        <div class="p-5">
-                            <span>
-                                <h5 class="mb-2 text-2xl font-bold tracking-tight dark:text-white">Noteworthy technology acquisitions 2021</h5>
-                            </span>
-                            <p class="mb-3 font-normal ">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                        </div>
-                    </div>
-                    <div class="w-60 h-auto lg:max-w-sm bg-secondary-light text-white border border-gray-200 rounded-lg shadow-sm">
-                        <span>
-                            <img class="rounded-t-lg" src="../images/imgempty.jpg" alt="" />
-                        </span>
-                        <div class="p-5">
-                            <span>
-                                <h5 class="mb-2 text-2xl font-bold tracking-tight ">Noteworthy technology acquisitions 2021</h5>
-                            </span>
-                            <p class="mb-3 font-normal ">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                        </div>
-                    </div>
-                    <div class="hidden sm:block w-60 h-auto lg:max-w-sm xl:hidden max-w-sm bg-secondary-light text-white border border-gray-200 rounded-lg shadow-sm">
-                        <span>
-                            <img class="rounded-t-lg" src="../images/imgempty.jpg" alt="" />
-                        </span>
-                        <div class="p-5">
-                            <span href="#">
-                                <h5 class="mb-2 text-2xl font-bold tracking-tight">Noteworthy technology acquisitions 2021</h5>
-                            </span>
-                            <p class="mb-3 font-normal ">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                        </div>
-                    </div>
-                    <div class="items-center hidden xl:flex">
-                        <div class="w-10 h-80 bg-secondary-light flex items-center border border-0 rounded-r-xl cursor-pointer hover:scale-110 hover:border-secondary-light hover:bg-secondary-light duration-300">
-                            <span class="text-3xl text-white font-bold pl-2">></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="mx-10 mt-10">
-                <div class="flex flex-row">
-                    <h1 class="text-2xl font-bold text-secondary">My Experience</h1>
-                    <button class="xl:hidden text-[17px] ml-10 hover:underline cursor-pointer text-secondary-light">More</button>
-                </div>
-                <div class="mt-5 grid grid-cols-2 lg:grid-cols-4 justify-between gap-4">
-                    <div class="flex flex-col w-50 mt-2">
-                        <span class="font-bold">Lorem Ipsum</span>
-                        <span class="text-sm">nganangunu blablabla wakwaw</span>
-                    </div>
-                    <div class="flex flex-col w-50 mt-2">
-                        <span class="font-bold">Lorem Ipsum</span>
-                        <span class="text-sm">nganangunu blablabla wakwaw</span>
-                    </div>
-                    <div class="flex flex-col w-50 mt-2">
-                        <span class="font-bold">Lorem Ipsum</span>
-                        <span class="text-sm">nganangunu blablabla wakwaw</span>
-                    </div>
-                    <div class="flex flex-col w-50 mt-2">
-                        <span class="font-bold">Lorem Ipsum</span>
-                        <span class="text-sm">nganangunu blablabla wakwaw</span>
-                    </div>
-                    <div class="flex flex-col w-50 mt-2">
-                        <span class="font-bold">Lorem Ipsum</span>
-                        <span class="text-sm">nganangunu blablabla wakwaw</span>
-                    </div>
-                    <div class="flex flex-col w-50 mt-2">
-                        <span class="font-bold">Lorem Ipsum</span>
-                        <span class="text-sm">nganangunu blablabla wakwaw</span>
-                    </div>
-                </div>
-            </div>
-            <div class="mx-10 mt-10">
-                <div class="flex flex-row">
-                    <h1 class="text-2xl font-bold text-secondary">My Abilities</h1>
-                    <button class="xl:hidden text-[17px] ml-10 hover:underline cursor-pointer text-secondary-light">More</button>
-                </div>
-                <div class="mt-5 grid grid-cols-2 lg:grid-cols-4 justify-between gap-4">
-                    <div class="flex flex-col w-50 mt-2">
-                        <span class="font-bold">Lorem Ipsum</span>
-                        <span class="text-sm">nganangunu blablabla wakwaw</span>
-                    </div>
-                    <div class="flex flex-col w-50 mt-2">
-                        <span class="font-bold">Lorem Ipsum</span>
-                        <span class="text-sm">nganangunu blablabla wakwaw</span>
-                    </div>
-                    <div class="flex flex-col w-50 mt-2">
-                        <span class="font-bold">Lorem Ipsum</span>
-                        <span class="text-sm">nganangunu blablabla wakwaw</span>
-                    </div>
-                    <div class="flex flex-col w-50 mt-2">
-                        <span class="font-bold">Lorem Ipsum</span>
-                        <span class="text-sm">nganangunu blablabla wakwaw</span>
-                    </div>
-                    <div class="flex flex-col w-50 mt-2">
-                        <span class="font-bold">Lorem Ipsum</span>
-                        <span class="text-sm">nganangunu blablabla wakwaw</span>
-                    </div>
-                    <div class="flex flex-col w-50 mt-2">
-                        <span class="font-bold">Lorem Ipsum</span>
-                        <span class="text-sm">nganangunu blablabla wakwaw</span>
-                    </div>
-                </div>
-            </div>
-            <div class="mx-10 mt-10">
-                <div class="flex flex-row">
-                    <h1 class="text-2xl font-bold text-secondary">Let's Get Connected</h1>
-                    <button class="xl:hidden text-[17px] ml-10 hover:underline cursor-pointer text-secondary-light">More</button>
-                </div>
-                <div class="mt-5 flex gap-4">
-                    <a href="https://www.instagram.com/elighto/" class="flex flex-col w-20 h-20 mt-2 bg-[#E5E5E5] justify-center items-center border border-[#E5E5E5] rounded-full">
-                        <i class="fa-brands fa-instagram text-4xl text-secondary"></i>
-                    </a>
-                    <a href="#" class="flex flex-col w-20 h-20 mt-2 bg-[#E5E5E5] justify-center items-center border border-[#E5E5E5] rounded-full">
-                        <i class="fa-brands fa-github text-4xl text-secondary"></i>
-                    </a>
-                    <a href="#" class="flex flex-col w-20 h-20 mt-2 bg-[#E5E5E5] justify-center items-center border border-[#E5E5E5] rounded-full">
-                        <i class="fa-regular fa-envelope text-4xl text-secondary"></i>
-                    </a>
-                    <a href="#" class="flex flex-col w-20 h-20 mt-2 bg-[#E5E5E5] justify-center items-center border border-[#E5E5E5] rounded-full">
-                        <i class="fa-brands fa-linkedin-in text-4xl text-secondary"></i>
+            <div class="mx-7 mt-8 flex flex-col gap-6">
+                <div class="flex flex-wrap items-center space-x-2">
+                    <span class="font-bold text-secondary">Teams</span>
+                    <a href="">
+                        <svg class="hover:w-5 hover:h-6 duration-300 cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="10" height="17" viewBox="0 0 15 27" fill="none">
+                            <path d="M3 24.5L11.6404 13.9395C11.8496 13.6838 11.8496 13.3162 11.6404 13.0605L3 2.5" stroke="#245581" stroke-width="5" stroke-linecap="round"/>
+                        </svg>
                     </a>
                 </div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 space-x-5">
+                    <div class="p-2.5 w-70 mt-3 flex flex-col rounded-4xl px-4 duration-300 bg-secondary-light text-black  space-y-4">
+                        <h1 class="text-xl font-black mt-5">Team's Name</h1>
+                        <span>Lorem Ipsum dolor sit amet</span>
+                        <ol class="list-none text-sm">
+                            <li>Reqruire 1</li>
+                            <li>Reqruire 2</li>
+                            <li>Reqruire 3</li>
+                            <li>Reqruire 4</li>
+                        </ol>
+                        <div class="flex justify-between mt-5 mb-5">
+                            <button class="border-2 border-black rounded-full px-5 py-1 cursor-pointer hover:text-white hover:bg-black hover:scale-110 duration-300">Check</button>
+                            <button class="border-2 bg-blue-100 border-black rounded-full px-5 py-1 cursor-pointer hover:bg-blue-50 hover:scale-110 duration-300">Join</button>
+                        </div>
+                    </div>
+                    <div class="p-2.5 w-70 mt-3 flex flex-col rounded-4xl px-4 duration-300 bg-secondary-light text-black  space-y-4">
+                        <h1 class="text-xl font-black mt-5">Team's Name</h1>
+                        <span>Lorem Ipsum dolor sit amet</span>
+                        <ol class="list-none text-sm">
+                            <li>Reqruire 1</li>
+                            <li>Reqruire 2</li>
+                            <li>Reqruire 3</li>
+                            <li>Reqruire 4</li>
+                        </ol>
+                        <div class="flex justify-between mt-5 mb-5">
+                            <button class="border-2 border-black rounded-full px-5 py-1 cursor-pointer hover:text-white hover:bg-black hover:scale-110 duration-300">Check</button>
+                            <button class="border-2 bg-blue-100 border-black rounded-full px-5 py-1 cursor-pointer hover:bg-blue-50 hover:scale-110 duration-300">Join</button>
+                        </div>
+                    </div>
+                    <div class="p-2.5 w-70 mt-3 flex flex-col rounded-4xl px-4 duration-300 bg-secondary-light text-black  space-y-4">
+                        <h1 class="text-xl font-black mt-5">Team's Name</h1>
+                        <span>Lorem Ipsum dolor sit amet</span>
+                        <ol class="list-none text-sm">
+                            <li>Reqruire 1</li>
+                            <li>Reqruire 2</li>
+                            <li>Reqruire 3</li>
+                            <li>Reqruire 4</li>
+                        </ol>
+                        <div class="flex justify-between mt-5 mb-5">
+                            <button class="border-2 border-black rounded-full px-5 py-1 cursor-pointer hover:text-white hover:bg-black hover:scale-110 duration-300">Check</button>
+                            <button class="border-2 bg-blue-100 border-black rounded-full px-5 py-1 cursor-pointer hover:bg-blue-50 hover:scale-110 duration-300">Join</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
+         </div>
+        
     </main>
-    <div class="fixed bottom-10 right-10 w-15 h-15 border-0 rounded-2xl flex justify-center items-center bg-[#F099BF] hover:bg-[#f5a6c9] hover:scale-110 duration-300 cursor-pointer">
-        <i class="fa-regular fa-pen-to-square text-3xl text-white"></i>
-    </div>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const menuToggle = document.getElementById('menuToggle');
