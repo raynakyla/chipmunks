@@ -11,11 +11,9 @@
     integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body style="font-family: Poppins;" class="overflow-hidden bg-[#F5EFF2]">
-    <header class="hidden mx-auto top-0 px-10 py-10 md:flex justify-left items-center fixed sm:relative z-20">
+    <header class="mx-auto top-0 px-10 py-10 flex justify-left items-center fixed relative z-20">
         <div class="flex items-center">
-            <a href="#" class="text-3xl font-bold">
-                <span class="">chipmunks</span>
-            </a>
+            <span class="text-3xl font-bold">chipmunks</span>
         </div>
     </header>   
     <main>
@@ -23,30 +21,30 @@
             <div class="mt-20">
                 <div class="justify-center text-center">
                     <h1 class="text-3xl font-bold">Hi! Welcome Back</h1>
-                    <p class="text-lg text-gray-500">please enter your details</p>
+                    <p class="text-lg text-gray-500">Connect With Wider World</p>
                 </div>
                 <div class="mt-20">
                     <form action="">
-                        <div class="relative mx-30">
-                            <label class="mb-2" for="username">Email</label>
-                            <div class="absolute top-7 left-2 bg-white-medium rounded-full p-2 flex justify-center items-center text-blue-500">
-                                <i  style="color: #2b7efe;" class="fa-solid fa-user"></i>
-                            </div>
-                            <input id="username" style="border: 2px solid #D9D9D9;" class="w-full bg-white-light py-2 px-12 rounded-full focus:bg-gray-300 focus:outline-none focus:ring-1 focus:ring-black focus:drop-shadow-lg" type="email" name="email" placeholder="Email Address">
-                        </div>
-                        <div class="relative mx-30 mt-7">
+                        <div class="relative mx-10 md:mx-30">
                             <label class="mb-2" for="password">Username</label>
+                            <div class="absolute top-7 left-2 bg-white-medium rounded-full p-2 flex justify-center items-center text-blue-500">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <input class="w-full bg-gray-100 border-2 border-gray-300 py-2 px-12 rounded-full focus:bg-black-dark focus:outline-none focus:ring-1 focus:ring-black focus:drop-shadow-lg" type="email" name="email" placeholder="Email Address">
+                        </div>
+                        <div class="relative mx-10 md:mx-30 mt-7">
+                            <label class="mb-2" for="password">Password</label>
                             <div class="absolute top-7 left-2 bg-white-medium rounded-full p-2 flex justify-center items-center text-blue-500">
                                 <i style="color: #2b7efe;" class="fa-solid fa-lock"></i>
                             </div>
-                            <input id="password" style="border: 2px solid #D9D9D9;" class="w-full bg-white-light py-2 px-12 rounded-full focus:bg-gray-300 focus:outline-none focus:ring-1 focus:ring-black focus:drop-shadow-lg" type="password" name="password" placeholder="Password">
+                            <input id="password" class="w-full bg-gray-100 border-2 border-gray-300 py-2 px-12 rounded-full focus:bg-black-dark focus:outline-none focus:ring-1 focus:ring-black focus:drop-shadow-lg" type="password" name="password" placeholder="Password">
                         </div>
-                        <input  class="bg-blue-500 px-5 py-2 text-white border-[#F5EFF2] rounded-full ml-30 mt-7 hover:bg-blue-600 hover:scale-110 duration-300 cursor-pointer" type="button" value="Login">
+                        <button  class="bg-blue-500 px-5 py-2 text-white border-[#F5EFF2] rounded-full ml-10 md:ml-30 mt-7 hover:bg-blue-600 hover:scale-110 duration-300 cursor-pointer" type="button"><a href="../pages/profil.html">Sign In</a></button>
                     </form>
                 </div>
-                <span class="absolute bottom-0 ml-30 mb-10">Didn't have an account? <a href="#" class="text-blue-500">Sign Up</a></span>
+                <span class="absolute bottom-0 ml-10 md:ml-30 mb-10">Didn't have an account? <a href="signup.html" class="text-blue-500">Sign Up</a></span>
             </div>
-            <div class="justify-center items-center text-center">
+            <div style="justify-items: center;" class="hidden md:block">
                 <img src="../images/medal.png" alt="">
             </div>
         </section>

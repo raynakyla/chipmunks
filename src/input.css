@@ -5,5 +5,8 @@
     --color-white-dull: #ffffffb3;
     --color-white-light: #ffffff30;
     --color-white-medium: #ffffff40;
+    --color-primary: #AE4562;
+    --color-secondary: #245581;
+    --color-secondary-light: #5890C9;
     --font-display-poppin: "Poppins";
 }

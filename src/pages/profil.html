@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="../output.css" rel="stylesheet">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style type="text/tailwindcss">
+        @theme {
+            --color-primary: #AE4562;
+                --color-secondary: #245581;
+                --color-secondary-light: #5890C9;
+            --font-display-poppin: "Poppins";
+        }
+    </style>
+</head>
+<body style="font-family: Poppins;" class="overflow-x-hidden overflow-y-auto">
+    <header class="hidden mx-auto top-0 pt-5 px-4 py-5 md:flex justify-between items-center fixed sm:relative z-20 bg-[#F5EFF2] ">
+        <div class="flex items-center mr-16">
+            <div href="#" class="bg-[#D9D9D9] rounded-full w-10 h-10 ml-5"></div>
+            <p class="ml-3 text-primary">username</p>
+        </div>
+        <div class="flex items-center">
+            <a href="#" class="text-2xl font-bold">
+                <span class="text-primary">chipmunks</span>
+            </a>
+        </div>
+    
+        <div class="flex flex-col md:flex-row items-center space-x-4 mr-5">
+            <a href=""><i class="fa-solid fa-bell text-primary"></i></a>
+            <input type="text" placeholder="Search" class="text-[15px] w-full bg-transparent border-2 border-[#D9D9D9] rounded-full px-4 py-1">
+        </div>
+    </header>
+    <main class="flex flex-row">
+        <!-- menu desktop -->
+        <div class="fixed hidden h-full md:block pt-10 top-0 bottom-0 lg:left-0 p-2 w-[300px] overflow-y-auto overflow-x-hidden text-center bg-[#F5EFF2]">
+            <h1 class="font-bold text-primary text-[25px]">chipmunks</h1>
+            <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 hover:bg-[#D9D9D9] text-secondary cursor-pointer">
+                <i class="fa-solid fa-user"></i>
+                <span class="text-[15px] ml-4">Profil</span>
+            </div>
+            <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 hover:bg-[#D9D9D9] text-secondary cursor-pointer">
+                <i class="fa-solid fa-home"></i>
+                <span class="text-[15px] ml-4">Home</span>
+            </div>
+            <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 hover:bg-[#D9D9D9] text-secondary cursor-pointer">
+                <i class="fa-solid fa-sitemap"></i>
+                <span class="text-[15px] ml-4">Team</span>
+            </div>
+            <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 hover:bg-[#D9D9D9] text-secondary cursor-pointer">
+                <i class="fa-solid fa-users"></i>
+                <span class="text-[15px] ml-4">Comunity</span>
+            </div>
+            <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 hover:bg-[#D9D9D9] text-secondary cursor-pointer">
+                <i class="fa-solid fa-comment"></i>
+                <span class="text-[15px] ml-4">Messages</span>
+            </div>
+            <div class="absolute bottom-10 left-10 w-30 p-2.5 flex items-center rounded-md px-4 duration-300 bg-secondary-light hover:scale-110 hover:bg-secondary text-white cursor-pointer">
+                <i class="fa-solid fa-plus"></i>
+                <span class="text-[15px] ml-4">Upload</span>
+            </div>
+        </div>
+
+        <div class="fixed top-0 w-full md:hidden bg-[#F5EFF2] backdrop-blur-2xl">
+            <button class="text-primary m-8" id="menuToggle">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+            <a href="#" class="text-2xl font-bold">
+                <span class="text-primary">chipmunks</span>
+            </a>
+        </div>
+
+        <!-- menu mobile -->
+        <div class="hidden md:hidden fixed md:top-20 top-0 bottom-0 lg:left-0 p-2 w-[300px] overflow-y-auto overflow-x-hidden text-center bg-[#F5EFF250] backdrop-blur-md" id="mobileMenu">
+            <div class="text-gray-100 text-xl">
+                <div class="p-2.5 mt-1 flex items-center">
+                    <h1 class="font-bold text-primary text-[25px] ml-3">chipmunks</h1>
+                </div>
+                <hr class="my-2 text-gray-600">
+            </div>
+            <div>
+                <div class="flex flex-col md:flex-row items-center space-x-4 mr-5">
+                    <a href=""><i class="fa-solid fa-magnifying-glass absolute left-6 top-24"></i></a>
+                    <input type="text" placeholder="Search" class="text-[15px] py-2 px-12 w-full bg-transparent border-2 border-[#D9D9D9] rounded-full px-4 py-1">
+                </div>
+                <div class="p-2.5 mt-3 flex items-centerrounded-md px-4 duration-300 hover:bg-[#D9D9D9] text-secondary cursor-pointer">
+                    <i class="fa-solid fa-bell"></i>
+                    <span class="text-[15px] ml-4 ">Notification</span>
+                </div>
+            </div>
+            <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 hover:bg-[#D9D9D9] text-secondary cursor-pointer">
+                <i class="fa-solid fa-user"></i>
+                <span class="text-[15px] ml-4">Profil</span>
+            </div>
+            <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 hover:bg-[#D9D9D9] text-secondary cursor-pointer">
+                <i class="fa-solid fa-home"></i>
+                <span class="text-[15px] ml-4">Home</span>
+            </div>
+            <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 hover:bg-[#D9D9D9] text-secondary cursor-pointer">
+                <i class="fa-solid fa-sitemap"></i>
+                <span class="text-[15px] ml-4">Team</span>
+            </div>
+            <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 hover:bg-[#D9D9D9] text-secondary cursor-pointer">
+                <i class="fa-solid fa-users"></i>
+                <span class="text-[15px] ml-4">Comunity</span>
+            </div>
+            <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 hover:bg-[#D9D9D9] text-secondary cursor-pointer">
+                <i class="fa-solid fa-comment"></i>
+                <span class="text-[15px] ml-4">Messages</span>
+            </div>
+            <div class="flex items-center ml-3 mt-5 text-secondary">
+                <div href="#" class="bg-[#D9D9D9] rounded-full w-7 h-7"></div>
+                <p class="ml-3">username</p>
+            </div>
+            <div class="absolute bottom-10 left-10 w-30 p-2.5 flex items-center rounded-md px-4 duration-300 bg-secondary-light hover:scale-110 hover:bg-secondary text-white cursor-pointer">
+                <i class="fa-solid fa-plus"></i>
+                <span class="text-[15px] ml-4">Upload</span>
+            </div>
+        </div>
+        <div class="ml-0 mt-20 md:mt-0 md:ml-75 mb-20">
+            <div class="mx-10 my-10 flex flex-col md:flex-row gap-6">
+                <div class="rounded-full flex items-center">
+                    <img class="xl:max-w-[300px] xl:max-h-[300px] max-h-[150px] max-w-[150px] border rounded-full" src="../images/profile.png" alt="">
+                </div>
+                <div class="mt-2 md:mt-10 max-w-[500px] flex-col">
+                    <div class="gap-0">
+                        <h1 class="text-2xl font-bold text-secondary">Display Name</h1>
+                        <span class="text-secondary-light">@username</span>
+                    </div>
+                    <div class="mt-2 md:mt-5">
+                        <span class="text-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi semper condimentum felis et pulvinar. 
+                            Praesent dui est, semper at justo vel, sagittis finibus ligula.</span>
+                    </div>
+                    <div class="mt-2 md:mt-5">
+                        <a class="text-secondary hover:text-secondary-light underline" href="#">https://PortofolioLink.com/</a>
+                    </div>
+                </div>
+            </div>
+            <div class="hidden md:block mx-10">
+                <div class="flex flex-row">
+                    <h1 class="text-2xl font-bold text-secondary">Recent Activity</h1>
+                    <button class="xl:hidden ml-10 text-[17px] hover:underline cursor-pointer text-secondary-light">More</button>
+                </div>
+                <div class="mt-5 grid md:grid-cols-2 xl:grid-cols-4 justify-between gap-4">
+                    <div class="max-w-sm bg-secondary border border-gray-200 rounded-lg shadow-sm">
+                        <a href="#">
+                            <img class="rounded-t-lg" src="../images/medal.png" alt="" />
+                        </a>
+                        <div class="p-5">
+                            <a href="#">
+                                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
+                            </a>
+                            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                        </div>
+                    </div>
+                    <div class="max-w-sm bg-secondary border border-gray-200 rounded-lg shadow-sm ">
+                        <a href="#">
+                            <img class="rounded-t-lg" src="../images/medal.png" alt="" />
+                        </a>
+                        <div class="p-5">
+                            <a href="#">
+                                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
+                            </a>
+                            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                        </div>
+                    </div>
+                    <div class="max-w-sm bg-secondary border border-gray-200 rounded-lg shadow-sm">
+                        <a href="#">
+                            <img class="rounded-t-lg" src="../images/medal.png" alt="" />
+                        </a>
+                        <div class="p-5">
+                            <a href="#">
+                                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
+                            </a>
+                            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                        </div>
+                    </div>
+                    <div class="xl:hidden max-w-sm bg-secondary border border-gray-200 rounded-lg shadow-sm">
+                        <a href="#">
+                            <img class="rounded-t-lg" src="../images/medal.png" alt="" />
+                        </a>
+                        <div class="p-5">
+                            <a href="#">
+                                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
+                            </a>
+                            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                        </div>
+                    </div>
+                    <div class="items-center hidden xl:flex">
+                        <div class="w-10 h-80 bg-secondary flex items-center border border-secondary rounded-r-xl cursor-pointer hover:scale-110 hover:border-secondary-light hover:bg-secondary-light duration-300">
+                            <span class="text-3xl text-white font-bold pl-2">></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mx-10 mt-10">
+                <div class="flex flex-row">
+                    <h1 class="text-2xl font-bold text-secondary">My Experience</h1>
+                    <button class="xl:hidden text-[17px] ml-10 hover:underline cursor-pointer text-secondary-light">More</button>
+                </div>
+                <div class="mt-5 grid grid-cols-2 lg:grid-cols-4 justify-between gap-4">
+                    <div class="flex flex-col w-50 mt-2">
+                        <span class="font-bold">Lorem Ipsum</span>
+                        <span class="text-sm">nganangunu blablabla wakwaw</span>
+                    </div>
+                    <div class="flex flex-col w-50 mt-2">
+                        <span class="font-bold">Lorem Ipsum</span>
+                        <span class="text-sm">nganangunu blablabla wakwaw</span>
+                    </div>
+                    <div class="flex flex-col w-50 mt-2">
+                        <span class="font-bold">Lorem Ipsum</span>
+                        <span class="text-sm">nganangunu blablabla wakwaw</span>
+                    </div>
+                    <div class="flex flex-col w-50 mt-2">
+                        <span class="font-bold">Lorem Ipsum</span>
+                        <span class="text-sm">nganangunu blablabla wakwaw</span>
+                    </div>
+                    <div class="flex flex-col w-50 mt-2">
+                        <span class="font-bold">Lorem Ipsum</span>
+                        <span class="text-sm">nganangunu blablabla wakwaw</span>
+                    </div>
+                    <div class="flex flex-col w-50 mt-2">
+                        <span class="font-bold">Lorem Ipsum</span>
+                        <span class="text-sm">nganangunu blablabla wakwaw</span>
+                    </div>
+                </div>
+            </div>
+            <div class="mx-10 mt-10">
+                <div class="flex flex-row">
+                    <h1 class="text-2xl font-bold text-secondary">My Abilities</h1>
+                    <button class="xl:hidden text-[17px] ml-10 hover:underline cursor-pointer text-secondary-light">More</button>
+                </div>
+                <div class="mt-5 grid grid-cols-2 lg:grid-cols-4 justify-between gap-4">
+                    <div class="flex flex-col w-50 mt-2">
+                        <span class="font-bold">Lorem Ipsum</span>
+                        <span class="text-sm">nganangunu blablabla wakwaw</span>
+                    </div>
+                    <div class="flex flex-col w-50 mt-2">
+                        <span class="font-bold">Lorem Ipsum</span>
+                        <span class="text-sm">nganangunu blablabla wakwaw</span>
+                    </div>
+                    <div class="flex flex-col w-50 mt-2">
+                        <span class="font-bold">Lorem Ipsum</span>
+                        <span class="text-sm">nganangunu blablabla wakwaw</span>
+                    </div>
+                    <div class="flex flex-col w-50 mt-2">
+                        <span class="font-bold">Lorem Ipsum</span>
+                        <span class="text-sm">nganangunu blablabla wakwaw</span>
+                    </div>
+                    <div class="flex flex-col w-50 mt-2">
+                        <span class="font-bold">Lorem Ipsum</span>
+                        <span class="text-sm">nganangunu blablabla wakwaw</span>
+                    </div>
+                    <div class="flex flex-col w-50 mt-2">
+                        <span class="font-bold">Lorem Ipsum</span>
+                        <span class="text-sm">nganangunu blablabla wakwaw</span>
+                    </div>
+                </div>
+            </div>
+            <div class="mx-10 mt-10">
+                <div class="flex flex-row">
+                    <h1 class="text-2xl font-bold text-secondary">Let's Get Connected</h1>
+                    <button class="xl:hidden text-[17px] ml-10 hover:underline cursor-pointer text-secondary-light">More</button>
+                </div>
+                <div class="mt-5 flex gap-4">
+                    <div class="flex flex-col w-20 h-20 mt-2 bg-[#E5E5E5] justify-center items-center border border-[#E5E5E5] rounded-full">
+                        <i class="fa-brands fa-instagram text-4xl text-secondary"></i>
+                    </div>
+                    <div class="flex flex-col w-20 h-20 mt-2 bg-[#E5E5E5] justify-center items-center border border-[#E5E5E5] rounded-full">
+                        <i class="fa-brands fa-github text-4xl text-secondary"></i>
+                    </div>
+                    <div class="flex flex-col w-20 h-20 mt-2 bg-[#E5E5E5] justify-center items-center border border-[#E5E5E5] rounded-full">
+                        <i class="fa-regular fa-envelope text-4xl text-secondary"></i>
+                    </div>
+                    <div class="flex flex-col w-20 h-20 mt-2 bg-[#E5E5E5] justify-center items-center border border-[#E5E5E5] rounded-full">
+                        <i class="fa-brands fa-linkedin-in text-4xl text-secondary"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('menuToggle');
+            const mobileMenu = document.getElementById('mobileMenu');
+            
+            menuToggle.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+    
+            // Menutup menu saat mengklik di luar menu
+            document.addEventListener('click', function(event) {
+                if (!menuToggle.contains(event.target) && !mobileMenu.contains(event.target)) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
